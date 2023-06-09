@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-int get_numbers(int array_to_save[]);
 int min(int numbers[], int array_length);
 int max(int numbers[], int array_length);
 
