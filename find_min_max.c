@@ -9,12 +9,14 @@ int max(int numbers[], int array_length);
 
 int main(int argc, char *argv[])
 {
+    // Check if user give any command-line argument
     if (argc != 2)
     {
         printf ("Usage: ./find_min_max <min>\n");
         return EXIT_FAILURE;
     }
     
+    // Ask for the number of elements between 1-14
     int input;
     do
     {
@@ -26,16 +28,19 @@ int main(int argc, char *argv[])
 
     int numbers[elements];
 
+    // Get numbers from user
     for (int i = 0; i < elements; i++)
     {
         numbers[i] = get_int("Element %i: ", i+1);
     }
 
+    // Check if user chose to find minimum value
     if (strcmp("min", argv[1]) == 0)
     {
         printf ("The min value is: %i\n", min(numbers, elements));
         return EXIT_SUCCESS;
     }
+    // Check if user chose to find maximum value
     else if (strcmp("max", argv[1]) == 0)
     {
         printf ("The max value is: %i\n", max(numbers, elements));
